@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnopintura - Sistema de Gestión de Pedidos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tecnopintura - Sistema de Gestión de Pedidos</h1>
+    </header>
+    <main>
+        <form id="orderForm">
+            <label for="clientName">Nombre del Cliente:</label>
+            <input type="text" id="clientName" name="clientName" required>
+
+            <label for="clientPhone">Teléfono de Contacto:</label>
+            <input type="tel" id="clientPhone" name="clientPhone" required>
+
+            <label for="numModels">Cantidad de Modelos de Piezas:</label>
+            <input type="number" id="numModels" name="numModels" required min="1">
+            <button type="button" id="confirmNumModels">OK</button>
+
+            <div id="modelsFields"></div>
+
+            <label for="pickupOption">Opción de Recolección:</label>
+            <select id="pickupOption" name="pickupOption" required>
+                <option value="tecnopintura">Entregar en Tecnopintura</option>
+                <option value="direccion">Recolección en Dirección Específica</option>
+            </select>
+
+            <div id="pickupFields">
+                <label for="pickupAddress">Dirección de Recolección:</label>
+                <input type="text" id="pickupAddress" name="pickupAddress">
+
+                <label for="pickupDateTime">Fecha y Hora de Recolección:</label>
+                <input type="datetime-local" id="pickupDateTime" name="pickupDateTime">
+            </div>
+
+            <button type="submit">Enviar Pedido</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tecnopintura - Todos los derechos reservados</p>
+    </footer>
+    <div id="bottomSpace"></div> <!-- Espacio en blanco -->
+    <script src="scripts.js"></script>
+</body>
+</html>
+
